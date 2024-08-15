@@ -6,13 +6,16 @@ import Program from './components/Program';
 import Pricing from './components/Pricing';
 
 
+
 import './App.css';
 
 function App() {
+  
   return (
+    
     <Router>
-      <div className="font-montserrat bg-[rgba(210,195,195,0.6)] w-full h-[900px]">
-        <nav className="flex items-center justify-between bg-brown p-4 text-white fixed top-0 left-0 right-0 z-10" style={{ backgroundColor: 'red', color: 'white', padding: '1rem', position: 'fixed', width: '100%', top: '0' }}>
+      <div className="font-montserrat ">
+      <nav className="flex items-center justify-between bg-brown p-4 text-white fixed top-0 left-0 right-0 z-10" >
           <label className="logo text-2xl font-bold">Aria Harmony</label>
           <ul className="flex ml-10">
             <li className="mx-5">
