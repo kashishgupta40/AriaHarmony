@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Program from "./pages/Program";
 import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 import "./App.css";
 
@@ -21,9 +23,9 @@ function Navigation() {
   return (
     <nav className="flex justify-between bg-[#d2c3c399] p-[1.37rem] text-yellow-950 text-xl fixed top-0 left-0 right-0 z-10 w-full">
       <label className="logo text-3xl font-bold pl-[10rem]">Aria Harmony</label>
-      <ul className="flex pr-[19rem] text-red-950 font-bold text-2xl">
+      <ul className="flex pr-[19rem] text-red-950 font-bold text-2xl hover:text-stone-950">
         {navItems.map((item) => (
-          <li key={item.path} className="mx-5 pr-[1]">
+          <li key={item.path} className="mx-5 pr-[1] ">
             <Link
               to={item.path}
               className={`text-lg font-semibold ${
@@ -51,9 +53,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/program" element={<Program />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<div>Contact Page</div>} /> {/* Add Contact page component or placeholder */}
+          <Route path="/contact" element={<Contact />} />
+
         </Routes>
+        <Footer />
       </div>
+    
     </Router>
   );
 }
