@@ -6,17 +6,17 @@ function Home() {
       {/* Main Section */}
       <div
         id="main"
-        className="bg-[url('images/aria_harmony_design1_cropped.jpeg')] bg-no-repeat bg-right bg-[rgba(210,195,195,0.6)] w-full h-[900px]"
+        className="bg-[url('images/aria_harmony_design1_cropped.jpeg')] bg-no-repeat bg-right bg-[rgba(210,195,195,0.6)] w-full h-[900px] mb-0"
       >
-        <div id="maintext" className="mt-44 ml-24">
-          <h1 className="text-7xl">Experience</h1>
-          <h1 className="text-7xl">The future of music</h1>
+        <div id="maintext" className="mt-20 ml-24 pt-60">
+          <h1 className="text-7xl font-bold">Experience</h1>
+          <h1 className="text-7xl font-bold">The future of music</h1>
           <p id="tagline" className="mt-2 text-2xl font-medium">
             Chat and Sing with Your AI R & B Artist!
           </p>
           <button
             id="chat-button"
-            className="bg-brown h-12 w-50 rounded-lg text-2xl font-normal text-white mt-12 ml-24"
+            className="bg-red-600 border-spacing-2 border-2 border-black  h-12 w-50 rounded-lg text-2xl font-normal text-white mt-12 ml-24"
           >
             Chat Now
           </button>
@@ -29,15 +29,15 @@ function Home() {
       {/* About Section */}
       <div
         id="about"
-        className="bg-[url('images/aria_harmony_design2_cropped_rounededges.png')] bg-no-repeat bg-left-top bg-[#D2C3C9] w-full h-[1000px]"
+        className="bg-[url('images/aria_harmony_design2_cropped_rounededges.png')] bg-no-repeat bg-inherit bg-[#D2C3C9] w-full h-[1000px]"
       >
         <img
-          src="images/music_player_template.png"
+          src="\images\music_player_template.png"
           alt="musicplayer"
           className="ml-[300px] mt-[100px]"
         />
         <div id="abouttext" className="float-right mt-[220px] mr-[80px]">
-          <h1 className="text-7xl">Guess Who?</h1>
+          <h1 className="text-7xl font-bold">Guess Who?</h1>
           <p className="text-lg font-light mb-5">
             I’m your AI R & B Artist: here to sing your favorite tunes and chat with you anytime!
           </p>
