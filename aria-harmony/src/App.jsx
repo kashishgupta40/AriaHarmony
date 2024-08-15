@@ -1,48 +1,57 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Program from './components/Program';
-import Pricing from './components/Pricing';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Program from "./pages/Program";
+import Pricing from "./pages/Pricing";
 
+import "./App.css";
 
+function Navigation() {
+  const location = useLocation();
 
-import './App.css';
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/program', label: 'Program' },
+    { path: '/pricing', label: 'Pricing' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
+  return (
+    <nav className="flex justify-between bg-[#d2c3c399] p-[1.37rem] text-yellow-950 text-xl fixed top-0 left-0 right-0 z-10 w-full">
+      <label className="logo text-3xl font-bold pl-[10rem]">Aria Harmony</label>
+      <ul className="flex pr-[19rem] text-red-950 font-bold text-2xl">
+        {navItems.map((item) => (
+          <li key={item.path} className="mx-5 pr-[1]">
+            <Link
+              to={item.path}
+              className={`text-lg font-semibold ${
+                location.pathname === item.path ? 'text-red-950' : 'text-pink-800'
+              }`}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
 
 function App() {
-  
   return (
-    
     <Router>
-      <div className="font-montserrat ">
-      <nav className="flex items-center justify-between bg-brown p-4 text-white fixed top-0 left-0 right-0 z-10" >
-          <label className="logo text-2xl font-bold">Aria Harmony</label>
-          <ul className="flex ml-10">
-            <li className="mx-5">
-              <Link to="/" className="text-lg font-semibold">Home</Link>
-            </li>
-            <li className="mx-5">
-              <Link to="/about" className="text-lg font-semibold">About</Link>
-            </li>
-            <li className="mx-5">
-              <Link to="/program" className="text-lg font-semibold">Program</Link>
-            </li>
-            <li className="mx-5">
-              <Link to="/pricing" className="text-lg font-semibold">Pricing</Link>
-            </li>
-            <li className="mx-5">
-              <Link to="/contact" className="text-lg font-semibold">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <div className="font-montserrat bg-[#d2c3c399] w-full h-[900px]">
+        <Navigation />
+        
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/program" element={<Program />} />
           <Route path="/pricing" element={<Pricing />} />
-         
+          <Route path="/contact" element={<div>Contact Page</div>} /> {/* Add Contact page component or placeholder */}
         </Routes>
       </div>
     </Router>

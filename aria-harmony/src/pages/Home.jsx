@@ -6,7 +6,7 @@ function Home() {
       {/* Main Section */}
       <div
         id="main"
-        className="bg-[url('images/aria_harmony_design1_cropped.jpeg')] bg-no-repeat bg-right bg-[rgba(210,195,195,0.6)] w-full h-[900px] mb-0"
+        className="bg-[url('images/aria_harmony_design1_cropped.jpeg')] bg-no-repeat bg-right bg-[#d2c3c399] w-full h-[900px] mb-0"
       >
         <div id="maintext" className="mt-20 ml-24 pt-60">
           <h1 className="text-7xl font-bold">Experience</h1>
